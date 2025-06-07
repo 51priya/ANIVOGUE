@@ -19,6 +19,37 @@
         </nav>
     </div>
 
+
+    <center>
+<section class="api-section" style="background-color: #f0f8ff; padding: 20px; margin: 20px 0;">
+  <h2>Famous Anime Quotes</h2>
+  
+  <div id="anime-quote" style="font-weight: bold; font-size: 18px; margin-top: 10px;"></div>
+
+  <script>
+    const animeQuotes = [
+      "If you don’t take risks, you can’t create a future! – Monkey D. Luffy (One Piece)",
+      "I never go back on my word… that’s my nindō! – Naruto Uzumaki (Naruto)",
+      "Power comes in response to a need, not a desire. – Goku (Dragon Ball Z)",
+      "When you die, I'll be the one writing your name in my notebook. – Light Yagami (Death Note)",
+      "A lesson you must learn is to see with both eyes. – Gojo Satoru (Jujutsu Kaisen)",
+      "No matter how deep the night, it always turns to day, eventually. – Brook (One Piece)",
+      "The only thing we're allowed to do is believe. – Levi Ackerman (Attack on Titan)",
+      "Those who forgive themselves, and are able to accept their true nature… They are the strong ones. – Itachi Uchiha (Naruto)",
+      "The world is not beautiful, therefore it is. – Kino (Kino's Journey)",
+      "I wonder what you'd do if I died right now? – Dazai Osamu (Bungou Stray Dogs)"
+    ];
+
+    
+    const randomQuote = animeQuotes[Math.floor(Math.random() * animeQuotes.length)];
+
+    
+    document.getElementById("anime-quote").innerText = randomQuote;
+  </script>
+</section>
+    </center>
+
+    
      <div class="searchbar">
         <input placeholder="🔍search anime merch...">
         </input>
