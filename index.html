@@ -25,7 +25,7 @@
      </div>
      
      <div class="products">
-        <h2> KIMETSU NO YAIBA MERCH</h3>
+        <h2 style="color: red;">KIMETSU NO YAIBA MERCH</h2>
         <div class="box">
             <img width="300" height="400" src="Demon Slayer Kimono - Shinobu Kimono Uniform Clothes GOT1308.jpg">
             <p> Demon slayer- Shinobu kimono</p>
@@ -63,7 +63,7 @@
      </div>
 
      
-    <h2 >NARUTO MERCH</h2>
+    <h2 style="color: orangered;">NARUTO MERCH</h2>
     <div class="box">
         <img width="300" height="500" src="Itachi Uchiha Naruto Cloak Anime Robe Kimono Cardigans Unisex Outfits, 2XL.jpg">
         <p> Naruto kimono- Itachi kimono</p>
@@ -83,7 +83,7 @@
     </div>
 
     
-    <h2>OTHER ANIME MERCH</h2>
+    <h2 style="color: rgb(168, 4, 168);">OTHER ANIME MERCH</h2>
      <div class="box">
              <img width="300" height="500" src="Attack on Titan Kimono - AOT Military Kimono Custom Merch  Clothes GOT1308.jpg">
              <p> Attack on Titan kimono</p>
@@ -105,8 +105,11 @@
      <p> 
         <a href="register.html"><h4> Register To Buy Now</h4></a>
      </p>
-     </center>
+     <hr>
     
+     <button onclick="changeBackground()">Change Background</button>
+     
+     </center>
 
     <footer style="background-color:#222; color:#ccc; padding: 20px; text-align: center; font-size: 14px;">
     <p>
@@ -122,9 +125,15 @@
     </script>
   </footer>
 
-  
-</body>
-</html>
+  <script>
+    const colors = ["#ADD8E6", "#FFC0CB", "#90EE90", "#FFD700", "#D3D3D3"]; // Light Blue, Pink, Light Green, Gold, Light Gray
+    let currentIndex = 0;
+
+    function changeBackground() {
+      document.body.style.backgroundColor = colors[currentIndex];
+      currentIndex = (currentIndex + 1) % colors.length;
+    }
+  </script>
 
 </body>
 </html>
