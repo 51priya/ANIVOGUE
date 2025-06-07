@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>REGISTER</title>
+  <script>
+    function validateForm() {
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const mobile = document.getElementById("mobile").value.trim();
+      const address = document.getElementById("address").value.trim();
+
+      if (name === "") {
+        alert("Name is required");
+        return false;
+      }
+
+      if (!email.includes("@") || !email.includes(".")) {
+        alert("Enter a valid email");
+        return false;
+      }
+
+      if (!/^\d{10}$/.test(mobile)) {
+        alert("Mobile number must be 10 digits");
+        return false;
+      }
+
+      if (address === "") {
+        alert("Address is required");
+        return false;
+      }
+
+      alert("Form submitted successfully!");
+      return true;
+    }
+  </script>
+</head>
+<body>
+  <center>
+    <img height="500" src="download (4).jpg">
+    <h1>Register now to buy!!!</h1>
+
+    <form onsubmit="return validateForm()">
+      <table>
+        <tr>
+          <td>NAME</td>
+          <td><input type="text" id="name" placeholder="Enter your name"></td>
+        </tr>
+        <tr>
+          <td>EMAIL ID</td>
+          <td><input type="text" id="email" placeholder="Enter your email id"></td>
+        </tr>
+        <tr>
+          <td>MOBILE NO</td>
+          <td><input type="number" id="mobile" placeholder="Enter your mobile no"></td>
+        </tr>
+        <tr>
+          <td>ADDRESS</td>
+          <td><input type="text" id="address" placeholder="Enter your address"></td>
+        </tr>
+        <tr>
+          <td>SELECT YOUR MERCH</td>
+          <td>
+            <select>
+              <option>KIMONO</option>
+              <option>HOODIE</option>
+              <option>SOUVENIRS</option>
+              <option>DRESS/T-SHIRTS</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td><input type="reset"></td>
+          <td><input type="submit"></td>
+        </tr>
+      </table>
+    </form>
+  </center>
+</body>
+</html>
