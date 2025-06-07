@@ -74,18 +74,28 @@ nav a {
 
 .box {
   border: 2px solid black;
-  display: inline-block;
-  width: 300px;
-  margin: 10px;
-  padding: 10px;
+      display: inline-block;
+      width: 300px;
+      margin: 20px;
+      padding: 10px;
+      border-radius: 8px;
+      transition: 0.3s;
+      background-color: white;
 }
+
+.box:hover {
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      transform: scale(1.02);
+    }  
+
 
 .box img {
   width: 100%;
-  height: auto;
+      height: auto;
+      border-radius: 5px;
 }
 
-/* Footer */
+
 footer {
   background-color: #222;
   color: #ccc;
@@ -94,7 +104,6 @@ footer {
   font-size: 14px;
 }
 
-/* Responsive Design */
 @media (max-width: 600px) {
   nav {
     flex-direction: column;
